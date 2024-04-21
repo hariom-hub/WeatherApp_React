@@ -1,6 +1,7 @@
 import { useState } from "react";
 import InfoBox from "./infoBox";
 import SearchBox from "./SearchBox";
+import "./weatherapp.css";
 
 
 
@@ -15,7 +16,7 @@ export default function WeatherApp() {
         longitudes: "",
         pressure: "",
         temp: 28.1,
-        tempFeels: "",
+        tempFeels: "29.9",
         tempMax: 32,
         tempMin: 28.1,
         weather: "Clear sky",
@@ -32,7 +33,7 @@ export default function WeatherApp() {
     }
     return (
 
-        <div style={{ textAlign: "center" }}>
+        <div style={{ textAlign: "center" }} className="container">
             <h2>Weather Wise</h2>
             <SearchBox updateInfo = {updateInfo}/>
             <InfoBox info = {weatherInfo}/>

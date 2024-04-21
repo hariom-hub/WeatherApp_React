@@ -1,17 +1,16 @@
 .info-box{
     text-align: center;
     margin:0 auto;
+    font-weight: bolder;
 }
 
 .box{
-
     display: flex;
     justify-content: center;
     margin:0 auto;
     position: relative;
-    top: 20px;
     text-align: center;
     width: 50vw;
-    height: 70vh;
+    padding:5px;
 }
 

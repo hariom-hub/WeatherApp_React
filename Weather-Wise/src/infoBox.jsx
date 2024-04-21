@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import "./infobox.css";
 export default function InfoBox({info}) {
 
-    const imgUrl = "./elements/clearsky.jpg";
+    const imgUrl = "./elements/summer.webp";
     return (
 
         <div className="info-box">
@@ -29,17 +29,18 @@ export default function InfoBox({info}) {
                                 Temperature : {info.temp}&deg;C
                             </p>
                             <p>
-                                Humidity : {info.humiditiy}&deg;C
+                                Humidity : {info.humidity}&deg;C
                             </p>
-                            <p>
+                            {/* <p>
                                 weather : {`Feels like  ${info.weather}`}
-                            </p>
+                            </p> */}
                             <p>
                                 Temperature Min : {info.tempMin}&deg;C
                             </p>
                             <p>
                                 Temperature Max : {info.tempMax}&deg;C
                             </p>
+                            <p>Temperature can be described as <i>{info.weather}</i> and feels like <i>{info.tempFeels}</i></p>
 
                         </Typography>
                     </CardContent>
