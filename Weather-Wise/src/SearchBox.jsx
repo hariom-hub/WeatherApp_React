@@ -4,11 +4,12 @@ import "./searchbox.css";
 import { useState } from 'react';
 
 
-export default function SearchBox() {
+export default function SearchBox({ updateInfo }) {
     const [city, setCity] = useState("");
     const API_URL = "https://api.openweathermap.org/data/2.5/weather";
     const API_key = "5daa6b671278d8b3735bd898352154ba";
 
+    let [error, setError] = useState(false);
     const getWeatherInfo = async () => {
         try {
             const response = await fetch(`${API_URL}?q=${city}&appid=${API_key}&units=metric`);
@@ -18,7 +19,7 @@ export default function SearchBox() {
                 city: jsonResponse.name,
                 country: jsonResponse.sys.country,
                 temp: jsonResponse.main.temp,
-                weather:jsonResponse.weather[0].description,
+                weather: jsonResponse.weather[0].description,
                 humidity: jsonResponse.main.humidity,
                 tempFeels: jsonResponse.main.feels_like,
                 tempMax: jsonResponse.main.temp_max,
@@ -29,8 +30,9 @@ export default function SearchBox() {
                 longitudes: jsonResponse.coord.lon,
             };
             console.log(WeatherResult);
+            return WeatherResult;
         } catch (error) {
-            console.error("Error fetching weather data:", error);
+            throw error;
         }
     };
     let handleChange = (event) => {
@@ -38,23 +40,32 @@ export default function SearchBox() {
         setCity(event.target.value);
     }
 
-    let handleSubmit = (evnt) => {
+    let handleSubmit = async (evnt) => {
 
-        evnt.preventDefault();
-        console.log(`Search for city = ${city}`);
-        setCity("");
-        getWeatherInfo();
+        try {
+            evnt.preventDefault();
+            console.log(`Search for city = ${city}`);
+            setCity("");
+            let newInfo = await getWeatherInfo();
+            updateInfo(newInfo);
+        }
+        catch(err){
+            setError(true);
+        }
     }
 
 
     return (
 
         <div className="searchbox">
-            <h3>Search for Weather.</h3>
+            {/* <h3>Search for Weather.</h3> */}
             <form action="" onSubmit={handleSubmit}>
                 <TextField id="city" variant="outlined" label="City Name" required onChange={handleChange} value={city} />
                 <br /><br />
-                <Button variant='contained' type='submit'>Search</Button>
+                <Button variant='contained' type='submit' >Search</Button>
+                <p>
+                    {error&& <p style={{color:"red"}}>No such place exists.</p> }
+                </p>
             </form>
         </div>
 

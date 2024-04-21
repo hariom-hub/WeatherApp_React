@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import ButtonUsage from './button'
 import SearchBox from './SearchBox'
+import InfoBox from './infoBox'
+import WeatherApp from './weatherapp'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,8 +13,7 @@ function App() {
   return (
     <>
       <div className="container">
-        {/* <ButtonUsage /> */}
-        <SearchBox />
+        <WeatherApp />
       </div>
     </>
   )
