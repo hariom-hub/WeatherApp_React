@@ -6,11 +6,21 @@
 
 .box{
     display: flex;
+    position: fixed;
     justify-content: center;
     margin:0 auto;
     position: relative;
     text-align: center;
     width: 50vw;
     padding:5px;
+    height: 81vh;
+}
+.icons{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0px 20px;
+    
 }
 
