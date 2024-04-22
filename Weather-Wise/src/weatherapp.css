@@ -2,7 +2,7 @@ body {
     /*Change the image url if you want */
     background-image: url('https://assets-global.website-files.com/614716f50b4f49202fdd0087/616949393cf90643c1403605_6423.png');
     background-size: cover;
-    background-repeat: no-repeat;
+   background-repeat: unset;
     background-position: center;
 }
 
@@ -37,4 +37,25 @@ body {
 .box:hover .info-box {
     color: #3498db;
     /* Change text color on hover */
+}
+
+.heading__tag{
+color: red;
+position: relative;
+width: 50vw;
+height: 50px;
+text-align: center;
+padding-top: 10px;
+border-radius: 1rem;
+margin-top: 20px;
+background-color: white;
+}
+
+#box_inside{
+    background-color: cornsilk;
+    color: solid black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: left;
+    border:  2px solid #3498db;
+    padding: 10px;
 }

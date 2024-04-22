@@ -13,7 +13,7 @@ export default function InfoBox({info}) {
         <div className="info-box">
             {/* <h1>Weather Condition = {info.weather}</h1> */}
             <div className="box">
-                <Card sx={{ maxWidth: 345 }} id="box">
+                <Card sx={{ maxWidth: 345 }} id="box_inside">
                     <CardMedia
                         component="img"
                         alt="Clear Sky"

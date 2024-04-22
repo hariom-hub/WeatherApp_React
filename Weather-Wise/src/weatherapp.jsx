@@ -31,7 +31,7 @@ export default function WeatherApp() {
     return (
         <div className="container">
             <div className="box-container">
-                <h2>Weather Wise</h2>
+                <h2 className = "heading__tag">Weather Wise</h2>
                 {/* Include both search box and info box inside this container */}
                 <div className="content">
                     <SearchBox updateInfo={updateInfo} />
