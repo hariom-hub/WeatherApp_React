@@ -3,15 +3,11 @@ import InfoBox from "./infoBox";
 import SearchBox from "./SearchBox";
 import "./weatherapp.css";
 
-
-
 export default function WeatherApp() {
-
     const [weatherInfo, setWeatherInfo] = useState({
-
         city: "Hatta",
         country: "IN",
-        humiditiy: 25,
+        humidity: 25,
         latitudes: "",
         longitudes: "",
         pressure: "",
@@ -27,16 +23,21 @@ export default function WeatherApp() {
         }
     });
 
-    let updateInfo = (result)=>{
-
+    // Function to update weather information
+    const updateInfo = (result) => {
         setWeatherInfo(result);
-    }
-    return (
+    };
 
-        <div style={{ textAlign: "center" }} className="container">
-            <h2>Weather Wise</h2>
-            <SearchBox updateInfo = {updateInfo}/>
-            <InfoBox info = {weatherInfo}/>
+    return (
+        <div className="container">
+            <div className="box-container">
+                <h2>Weather Wise</h2>
+                {/* Include both search box and info box inside this container */}
+                <div className="content">
+                    <SearchBox updateInfo={updateInfo} />
+                    <InfoBox info={weatherInfo} />
+                </div>
+            </div>
         </div>
-    )
+    );
 }
