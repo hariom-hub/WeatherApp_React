@@ -1,4 +1,8 @@
-.searchbox{
+.searchbox {
     text-align: center;
+   
+    width: 18vw;
+    padding: 10px;
+    /* Add transition for smoother appearance */
+    transition: all 0.3s ease;
 }
-
