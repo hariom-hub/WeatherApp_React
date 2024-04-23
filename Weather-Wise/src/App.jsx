@@ -15,7 +15,7 @@ function App() {
       <div className="container">
       
         <WeatherApp />
-        <Header/>
+        {/* <Header/> */}
       </div>
     </>
   )
