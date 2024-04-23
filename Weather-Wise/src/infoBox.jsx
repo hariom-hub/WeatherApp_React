@@ -54,6 +54,9 @@ export default function InfoBox({ info }) {
     const winter = "./elements/winter.jpg";
     const summer = "./elements/summer.jpg";
     const monsoon = "./elements/monsoon.jpg";
+    const winterLogo = "./elements/winter-logo.jpg";
+    const summerLogo = "./elements/summer-logo.jpg";
+    const monsoonLogo = "./elements/rain-logo.jpg";
     // const winterIcon = <span class="material-symbols-outlined">ac_unit</span>
     // const summerIcon = <span class="material-symbols-outlined">
     //     sunny
@@ -73,19 +76,15 @@ export default function InfoBox({ info }) {
                         alt="Clear Sky"
                         height="140"
                         image={info.humidity > 80 ? monsoon : info.temp > 25 ? summer : winter}
-
                     />
                     <CardContent >
                         <div className="icons">
-                        <Typography>
-                            <h2>{info.city}&nbsp;&nbsp;
-                                {
-                                    info.humidity > 80 ? <ThunderstormIcon />
-                                    : info.temp > 15 ?
-                                    <WbSunnyIcon/> : <AcUnitIcon />
+                            <Typography>
+                                <h2>{info.city}&nbsp;&nbsp;{
+                                    info.humidity>80?<ThunderstormIcon/>:info.temp<25?<AcUnitIcon/>:<WbSunnyIcon/>
                                 }
-                            </h2>
-                        </Typography>
+                                </h2>
+                            </Typography>
                         </div>
                         <Typography variant="body2" color="text.secondary" component={"span"}>
                             <p>
