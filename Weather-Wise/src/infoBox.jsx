@@ -75,13 +75,13 @@ export default function InfoBox({ info }) {
                         component="img"
                         alt="Clear Sky"
                         height="140"
-                        image={info.humidity > 80 ? monsoon : info.temp > 25 ? summer : winter}
+                        image={info.humidity > 80 ? monsoon : info.temp > 20 ? summer : winter}
                     />
                     <CardContent >
                         <div className="icons">
                             <Typography>
                                 <h2>{info.city}&nbsp;&nbsp;{
-                                    info.humidity>80?<ThunderstormIcon/>:info.temp<25?<AcUnitIcon/>:<WbSunnyIcon/>
+                                    info.humidity>80?<ThunderstormIcon/>:info.temp>20?<WbSunnyIcon/>:<AcUnitIcon/>
                                 }
                                 </h2>
                             </Typography>
