@@ -151,13 +151,16 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
+                    
                     <!-- <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search"> -->
                     <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
-
-                    <div class="btn-group">
-                        <button class="btn btn-primary">Go to App<span class="material-symbols-outlined">
-                                open_in_new
-                            </span></button>
+                    <div class="right-nav" >
+                        <a href="https://github.com/hariom-hub/WeatherApp_React" target="_blank"><i class="fa-brands fa-square-github"  style="color: black;font-size: 35px;position: relative;top: 10px;"></i></a>
+                        <div class="btn-group">
+                            <button class="btn btn-primary" id="redirect">Go to App<span class="material-symbols-outlined">
+                                    open_in_new
+                                </span></button>
+                        </div>
                     </div>
 
                 </form>
@@ -184,40 +187,36 @@
                         style="color: rgb(0, 0, 0);">Weather-Wise</span></h3>
                 <div class="inner-features">
                     <div class="card border-success mb-3" style="max-width: 18rem;">
-                        <div class="card-header bg-transparent border-success">Header</div>
-                        <div class="card-body text-success">
-                            <h5 class="card-title">Success card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
+                        <!-- <div class="card-header bg-transparent border-black text-center">Accurate Data</div> -->
+                        <div class="card-body text-black">
+                            <h5 class="card-title">Interactive UI</h5>
+                            <p class="card-text">Weather-Wise provides user a simple and interactive user interface so that the user can easily access the weather information across the world.</p>
                         </div>
-                        <div class="card-footer bg-transparent border-success">Footer</div>
+                        <!-- <div class="card-footer bg-transparent border-success text-center">Footer</div> -->
                     </div>
                     <div class="card border-success mb-3" style="max-width: 18rem;">
-                        <div class="card-header bg-transparent border-success">Header</div>
-                        <div class="card-body text-success">
-                            <h5 class="card-title">Success card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
+                        <!-- <div class="card-header bg-transparent border-black text-center" ></div> -->
+                        <div class="card-body text-black">
+                            <h5 class="card-title">Faster Data rendering</h5>
+                            <p class="card-text">Using React and Operweather API helps in faster data transfer about the weather information in terms of Temperature,Humidity,Weather Aspect,Min & Max temperature and wind speed etc.</p>
                         </div>
-                        <div class="card-footer bg-transparent border-success">Footer</div>
+                        <!-- <div class="card-footer bg-transparent border-black text-center" >Footer</div> -->
                     </div>
                     <div class="card border-success mb-3" style="max-width: 18rem;">
-                        <div class="card-header bg-transparent border-success">Header</div>
-                        <div class="card-body text-success">
-                            <h5 class="card-title">Success card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
+                        <!-- <div class="card-header bg-transparent border-black text-center">Header</div> -->
+                        <div class="card-body text-black">
+                            <h5 class="card-title">Accurate Weather Data</h5>
+                            <p class="card-text">Weather-Wise provides accurate information of weather by accessing the latest information from the open weather API.</p>
                         </div>
-                        <div class="card-footer bg-transparent border-success">Footer</div>
+                        <!-- <div class="card-footer bg-transparent border-success text-center">Footer</div> -->
                     </div>
                     <div class="card border-success mb-3" style="max-width: 18rem;">
-                        <div class="card-header bg-transparent border-success">Header</div>
-                        <div class="card-body text-success">
-                            <h5 class="card-title">Success card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
+                        <!-- <div class="card-header bg-transparent border-black text-center" >Header</div> -->
+                        <div class="card-body text-black">
+                            <h5 class="card-title">Global Reach</h5>
+                            <p class="card-text">Weather-Wise covers a large area of weather information from all over the world which helps user to get the latest info about weather according to his/her need.</p>
                         </div>
-                        <div class="card-footer bg-transparent border-success">Footer</div>
+                        <!-- <div class="card-footer bg-transparent border-success text-center" >Footer</div> -->
                     </div>
                 </div>
             </div>
@@ -284,6 +283,15 @@
             </div>
         </div>
     </footer>
+    <script>
+
+        let button = document.getElementById('redirect');
+
+        button.addEventListener('click',()=>{
+
+            window.open(" http://localhost:5173/",'blank');
+        })
+    </script>
 </body>
 
 </html>
