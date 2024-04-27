@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Weather-Wise</title>
+    <link rel="icon" type="image/svg+xml" href="/Weather-Wise/elements/WeahterLogo.jpg" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #ff1493;
+            background-image: linear-gradient(319deg, #ff1493 0%, #0000ff 37%, #ff8c00 100%);
+        }
+
+        /* nav {
+          height:100px;
+          position: fixed;
+      } */
+        nav .container-fluid {
+            position: fixed;
+            z-index: 100;
+            top: 0.7px;
+            background-color: white;
+        }
+
+        .container-fluid {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .about {
+            top: 100px;
+            color: rgb(0, 0, 0);
+            position: relative;
+        }
+
+        .features {
+
+            top: 100px;
+            position: relative;
+        }
+
+        .inner-features {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+
+            flex-wrap: wrap;
+        }
+
+        .inner-features .card {
+            margin: 20px 70px;
+            position: relative;
+        }
+
+        .tech-used {
+
+            position: relative;
+            top: 100px;
+        }
+
+        .tech-used .icons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .icons .card {
+            position: relative;
+            margin: 10px 50px;
+        }
+
+        .icons .card:hover {
+            box-shadow: 2px 2px 2px 4px black;
+            box-sizing: border-box;
+            opacity: 1;
+            transition-duration: 0.5 s;
+            transition-delay: 0.01s;
+        }
+
+        .card span {
+            opacity: 0.7;
+        }
+
+        .card span:hover {
+            opacity: 1;
+            font-size: 1.05rem;
+            font-weight: bolder;
+            transition-duration: 2s;
+            transition-delay: 2s;
+        }
+
+        footer {
+            bottom: -60px;
+            height: 52px;
+            background-color: rgba(0, 0, 0, 0.884);
+            position: relative;
+
+        }
+
+        .createdby {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .createdby a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .footerdiv {
+            color: white;
+            display: flex;
+            margin: 40px 20px;
+            position: relative;
+            justify-content: space-around;
+            align-items: center;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <h1 style="font-weight: 1000;"><a class="navbar-brand" href="#" style="font-size: 30px;">Weather-Wise</a>
+            </h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+
+                    <!-- <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search"> -->
+                    <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+                    <div class="right-nav">
+                        <a href="https://github.com/hariom-hub/WeatherApp_React" target="_blank"><i
+                                class="fa-brands fa-square-github"
+                                style="color: black;font-size: 35px;position: relative;top: 10px;"></i></a>
+                        <div class="btn-group">
+                            <button class="btn btn-primary" id="redirect">Go to App<span
+                                    class="material-symbols-outlined">
+                                    open_in_new
+                                </span></button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </nav>
+    <main style="z-index: 10">
+        <div class="container-md">
+            <div class="about">
+                <h3 style="color: white;">About</h3>
+                <p style="line-height: 25px;">
+                    WeatherWise represents a culmination of our team's dedication to revolutionizing the way
+                    individuals interact with weather forecasts. In a world increasingly reliant on digital solutions,
+                    the
+                    importance of accurate and accessible weather information cannot be overstated. Recognizing the
+                    limitations of existing weather applications, we embarked on a journey to develop WeatherWise—a
+                    dynamic and intuitive platform designed to cater to the diverse needs of users.
+                    At its core, WeatherWise aims to bridge the gap between complexity and simplicity, offering users
+                    a seamless and intuitive interface to access real-time weather updates.
+                </p>
+            </div>
+            <div class="features">
+                <h3 style="color: rgb(237, 237, 237);">Features of <span
+                        style="color: rgb(0, 0, 0);">Weather-Wise</span></h3>
+                <div class="inner-features">
+                    <div class="card border-success mb-3" style="max-width: 18rem;">
+                        <!-- <div class="card-header bg-transparent border-black text-center">Accurate Data</div> -->
+                        <div class="card-body text-black">
+                            <h5 class="card-title">Interactive UI</h5>
+                            <p class="card-text">Weather-Wise provides user a simple and interactive user interface so
+                                that the user
+                                can easily access the weather information across the world.</p>
+                        </div>
+                        <!-- <div class="card-footer bg-transparent border-success text-center">Footer</div> -->
+                    </div>
+                    <div class="card border-success mb-3" style="max-width: 18rem;">
+                        <!-- <div class="card-header bg-transparent border-black text-center" ></div> -->
+                        <div class="card-body text-black">
+                            <h5 class="card-title">Faster Data rendering</h5>
+                            <p class="card-text">Using React and Operweather API helps in faster data transfer about the
+                                weather
+                                information in terms of Temperature,Humidity,Weather Aspect,Min & Max temperature and
+                                wind speed etc.
+                            </p>
+                        </div>
+                        <!-- <div class="card-footer bg-transparent border-black text-center" >Footer</div> -->
+                    </div>
+                    <div class="card border-success mb-3" style="max-width: 18rem;">
+                        <!-- <div class="card-header bg-transparent border-black text-center">Header</div> -->
+                        <div class="card-body text-black">
+                            <h5 class="card-title">Accurate Weather Data</h5>
+                            <p class="card-text">Weather-Wise provides accurate information of weather by accessing the
+                                latest
+                                information from the open weather API.</p>
+                        </div>
+                        <!-- <div class="card-footer bg-transparent border-success text-center">Footer</div> -->
+                    </div>
+                    <div class="card border-success mb-3" style="max-width: 18rem;">
+                        <!-- <div class="card-header bg-transparent border-black text-center" >Header</div> -->
+                        <div class="card-body text-black">
+                            <h5 class="card-title">Global Reach</h5>
+                            <p class="card-text">Weather-Wise covers a large area of weather information from all over
+                                the world
+                                which helps user to get the latest info about weather according to his/her need.</p>
+                        </div>
+                        <!-- <div class="card-footer bg-transparent border-success text-center" >Footer</div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="tech-used">
+                <h3 style="color: white;">Tech stack used in <span style="color: black;">Weather-Wise</span></h3>
+                <div class="icons">
+                    <div class="card" style="width: 5rem;">
+                        <img src="/Weather-Wise/elements/Bootstrap (1).svg" class="card-img-top" alt="...">
+                        <span style="text-align: center;">Bootstrap</span>
+                    </div>
+                    <div class="card" style="width: 5rem;">
+                        <img src="/Weather-Wise/elements/HTML5 (1).svg" class="card-img-top" alt="...">
+                        <span style="text-align: center;">HTML</span>
+                    </div>
+                    <div class="card" style="width: 5rem;">
+                        <img src="/Weather-Wise/elements/CSS3 (1).svg" class="card-img-top" alt="...">
+                        <span style="text-align: center;">CSS</span>
+                    </div>
+                    <div class="card" style="width: 5rem;">
+                        <img src="/Weather-Wise/elements/JavaScript.svg" class="card-img-top" alt="...">
+                        <span style="text-align: center;">Javascript</span>
+                    </div>
+                    <div class="card" style="width: 5rem;">
+                        <img src="/Weather-Wise/elements/React (1).svg" class="card-img-top" alt="...">
+                        <span style="text-align: center;">React</span>
+                    </div>
+                    <div class="card" style="width: 5rem;">
+                        <img src="/Weather-Wise/elements/Material UI.svg" class="card-img-top" alt="...">
+                        <span style="text-align: center;">Material UI</span>
+                    </div>
+                    <div class="card" style="width: 5rem;">
+                        <img src="/Weather-Wise/elements/Vite.js.svg" class="card-img-top" alt="...">
+                        <span style="text-align: center;">Vite.js</span>
+                    </div>
+                    <div class="card" style="width: 5rem;" style="text-align: center;">
+                        <img src="/Weather-Wise/elements/GitHub (1).svg" class="card-img-top" alt="...">
+                        <span style="text-align: center;">github</span>
+                    </div>
+                    <div class="card" style="width: 5rem;">
+                        <img src="/Weather-Wise/elements/Git (1).svg" class="card-img-top" alt="...">
+                        <span style="text-align: center;">Git</span>
+                    </div>
+                    <div class="card" style="width:5rem;">
+                        <img src="/Weather-Wise/elements/Firebase.svg" class="card-img-top" alt="...">
+                        <span style="text-align: center;">FireBase</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footerdiv">
+            <div class="right">
+                <h2>Created by</h2>
+            </div>
+            <div class="createdby">
+                <h3><a href="https://www.linkedin.com/in/hariom-singh-thakur-8b5089214/" target="_blank">Hariom</a></h3>
+                &nbsp;&nbsp;
+                <h3>&</h3>
+                &nbsp;&nbsp;
+                <h3><a href="https://www.linkedin.com/in/navneet-vishwakarma-b678aa262/" target="_blank">Navneet</a>
+                </h3>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+<script>
+
+    let button = document.getElementById('redirect');
+
+    button.addEventListener('click', async () => {
+
+        await window.open("http://localhost:5173/", 'blank');
+    })
+</script>
