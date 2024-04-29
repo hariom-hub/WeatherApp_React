@@ -20,13 +20,6 @@ export default function InfoBox({ info }) {
     const winterLogo = "./elements/winter-logo.jpg";
     const summerLogo = "./elements/summer-logo.jpg";
     const monsoonLogo = "./elements/rain-logo.jpg";
-    // const winterIcon = <span class="material-symbols-outlined">ac_unit</span>
-    // const summerIcon = <span class="material-symbols-outlined">
-    //     sunny
-    // </span>
-    // const monsoonIcon = <span class="material-symbols-outlined">
-    //     thunderstorm
-    // </span>
 
     return (
 
